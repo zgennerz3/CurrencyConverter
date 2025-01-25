@@ -1,6 +1,8 @@
 module com.example.currencycon.currencyconverter {
     requires javafx.controls;
     requires javafx.fxml;
+    requires okhttp3;
+    requires annotations;
 
 
     opens com.example.currencyconverter to javafx.fxml;
