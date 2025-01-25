@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.control.Button?>
@@ -14,7 +13,7 @@
         <TextField fx:id="CurrencyInput" promptText="From" />
         <Label text="-->" />
         <TextField fx:id="CurrencyOutput" promptText="To" />
-        <Button fx:id="ConvertButton" text="Go" />
+        <Button fx:id="ConvertButton" onAction="#OnConvertButtonClick" text="Go" />
     </HBox>
     <Label fx:id="ResultsText"/>
 </VBox>

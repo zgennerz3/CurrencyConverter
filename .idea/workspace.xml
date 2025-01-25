@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fbaa21f4-b6ae-4ffe-b40e-06353f339903" name="Changes" comment="Project setup continued...again">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="fbaa21f4-b6ae-4ffe-b40e-06353f339903" name="Changes" comment="Project setup continued...yet again">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/currencyconverter/Controller/ConversionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/currencyconverter/Controller/ConversionController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/currencyconverter/View/conversion-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/currencyconverter/View/conversion-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,12 +29,12 @@
     &quot;assignee&quot;: &quot;zgennerz3&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/zgennerz3/CurrencyConverter.git",
-    "accountId": "c28a44df-a54d-4993-9953-87cf15983684"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/zgennerz3/CurrencyConverter.git&quot;,
+    &quot;accountId&quot;: &quot;c28a44df-a54d-4993-9953-87cf15983684&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
