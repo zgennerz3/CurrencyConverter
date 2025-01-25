@@ -1,4 +1,4 @@
-package com.example.currencyconverter;
+package com.example.currencyconverter.Controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;

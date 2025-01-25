@@ -10,9 +10,9 @@ import java.io.IOException;
 public class CurrencyConverter extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(CurrencyConverter.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
+        FXMLLoader fxmlLoader = new FXMLLoader(CurrencyConverter.class.getResource("conversion-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 720, 480);
+        stage.setTitle("Currency Converter");
         stage.setScene(scene);
         stage.show();
     }
