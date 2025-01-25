@@ -7,12 +7,18 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.control.TextField?>
 
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
 <VBox alignment="CENTER" spacing="50.0" xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.example.currencyconverter.Controller.ConversionController">
     <Label fx:id="HeaderText" text="Currency Converter" />
     <HBox alignment="CENTER" spacing="8.0">
         <TextField fx:id="CurrencyInput" promptText="From" />
-        <Label text="-->" />
+        <ImageView fitHeight="50" fitWidth="50">
+            <image>
+                <Image url="@../Images/ConversionArrow.png" />
+            </image>
+        </ImageView>
         <TextField fx:id="CurrencyOutput" promptText="To" />
         <Button fx:id="ConvertButton" text="Go" />
     </HBox>
