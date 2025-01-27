@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fbaa21f4-b6ae-4ffe-b40e-06353f339903" name="Changes" comment="Added basic controller logic">
+    <list default="true" id="fbaa21f4-b6ae-4ffe-b40e-06353f339903" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/currencyconverter/Controller/ConversionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/currencyconverter/Controller/ConversionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/currencyconverter/CurrencyConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/currencyconverter/CurrencyConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/currencyconverter/View/FXML/conversion-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/currencyconverter/View/FXML/conversion-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/currencyconverter/Model/API.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/currencyconverter/Model/APIHandling.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +34,8 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/zgennerz3/CurrencyConverter.git&quot;,
-    &quot;accountId&quot;: &quot;c28a44df-a54d-4993-9953-87cf15983684&quot;
+    &quot;url&quot;: &quot;https://github.com/zgennerz3/CurrencyConverter&quot;,
+    &quot;accountId&quot;: &quot;885732d3-7ea1-4a55-93d8-7ab560892342&quot;
   }
 }</component>
   <component name="MavenImportPreferences">
@@ -58,6 +58,7 @@
   &quot;keyToString&quot;: {
     &quot;Application.CurrencyConverter.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
@@ -66,6 +67,9 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\zaneg\OneDrive\Documents\Coding Projects\CurrencyConverter\src\main\resources\com\example\currencyconverter\View" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -109,7 +113,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737788917406</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Implemented basic currency conversion retrieval, with GUI feedback">
+      <option name="closed" value="true" />
+      <created>1737795902926</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1737795902926</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -128,6 +140,7 @@
     <MESSAGE value="Project setup continued" />
     <MESSAGE value="Project setup continued...again" />
     <MESSAGE value="Added basic controller logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added basic controller logic" />
+    <MESSAGE value="Implemented basic currency conversion retrieval, with GUI feedback" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented basic currency conversion retrieval, with GUI feedback" />
   </component>
 </project>
