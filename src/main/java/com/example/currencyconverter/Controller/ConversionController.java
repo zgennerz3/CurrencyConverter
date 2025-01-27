@@ -6,7 +6,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Label;
 import javafx.util.Pair;
-import okhttp3.Response;
 
 public class ConversionController {
     @FXML private TextField CurrencyFrom;
@@ -19,24 +18,25 @@ public class ConversionController {
         String fromCurrencyInput = CurrencyFrom.getText();
         String toCurrencyInput = CurrencyTo.getText();
         try {
-            Pair<String, Integer> APIResponse =
-                    APIHandling.APICalls.GetConversionByCurrencies(fromCurrencyInput, toCurrencyInput);
+            Pair<String, Integer> APIResponse = APIHandling.APICalls.GetConversionByCurrencies(
+                    fromCurrencyInput, toCurrencyInput);
             // Switch on the HTTP code returned by the API call
             switch (APIResponse.getValue()) {
-                case 200:
+                case 200: // successful case
                     double conversionRate = APIHandling.APIProcessing.GetConversionRate(
                             APIResponse.getKey(), toCurrencyInput);
                     if (conversionRate == -1.0) {
-                        ResultsText.setText("The output currency is not supported");
-                    } else if (conversionRate == -2.0) {
-                        ResultsText.setText("An unexpected error occurred");
+                        ResultsText.setText("The output currency entered is not supported");
                     } else {
                         ResultsText.setText(String.format("The conversion rate from %s to %s is %f",
                                 fromCurrencyInput.toUpperCase(), toCurrencyInput.toUpperCase(), conversionRate));
                     } break;
-                case 404:
+                case 404: // invalid currency(s) case
                     ResultsText.setText("The conversion entered is not supported"); break;
-                default:
+                case 422: // both currency case
+                    ResultsText.setText(String.format("The conversion from %s to %s is 1...obviously",
+                            fromCurrencyInput.toUpperCase(), toCurrencyInput.toUpperCase())); break;
+                default: // unexpected error(s)
                     ResultsText.setText("An unexpected error occurred");
             }
         }

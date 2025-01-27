@@ -12,7 +12,8 @@ public class APIHandling {
     public static class APICalls {
         private static final OkHttpClient APIClient = new OkHttpClient();
 
-        public static Pair<String, Integer> GetConversionByCurrencies(String fromCurrency, String toCurrency) throws IOException {
+        public static Pair<String, Integer> GetConversionByCurrencies(
+                String fromCurrency, String toCurrency) throws IOException {
             Request request = new Request.Builder().url(
                     String.format("https://api.frankfurter.dev/v1/latest?base=%s&symbols=%s",
                             fromCurrency, toCurrency))

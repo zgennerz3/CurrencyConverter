@@ -8,5 +8,6 @@ module com.example.currencycon.currencyconverter {
     opens com.example.currencyconverter to javafx.fxml;
     exports com.example.currencyconverter;
     exports com.example.currencyconverter.Controller;
+    exports com.example.currencyconverter.Model;
     opens com.example.currencyconverter.Controller to javafx.fxml;
 }
