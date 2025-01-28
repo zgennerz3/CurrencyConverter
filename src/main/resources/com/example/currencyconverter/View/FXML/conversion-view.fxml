@@ -22,9 +22,9 @@
         <Button onAction="#OnConvertButtonClick" text="Go" />
     </HBox>
     <!--  Input field to specify the amount of currency to convert  -->
-    <Label text="Value to convert" />
+    <Label text="Convert Specified Amount" />
     <HBox alignment="CENTER" spacing="8.0">
-        <TextField fx:id="AmountOfCurrency" promptText="Enter value to convert" />
+        <TextField fx:id="AmountOfCurrency" promptText="Enter amount to convert" />
     </HBox>
     <Label fx:id="ResultsText"/>
     <Label fx:id="ConvertedCurrencyValue"/>

@@ -43,10 +43,15 @@ public class ConversionController {
                                     .replaceAll("\\.?0+$", "")); // remove trailing zeros
                             // Check if user input for amount of currency to convert is empty
                             if (AmountOfCurrency.getText().isEmpty()) {
+                                ConvertedCurrencyValue.setText("");
                                 break;
                             }
                             else {
-                                ConvertedCurrencyValue.setText("Working");
+                                String CurrencyInput = AmountOfCurrency.getText();
+                                Double ConvertedCurrency = (Double.parseDouble(CurrencyInput) * conversionRate);
+                                ConvertedCurrencyValue.setText(String.format("%s %s equals %.2f %s", CurrencyInput,
+                                        fromCurrencyInput.toUpperCase(), ConvertedCurrency,
+                                        toCurrencyInput.toUpperCase()));
                                 //ConvertSpecifiedAmount();
                             }
                         }
