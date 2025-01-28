@@ -31,7 +31,7 @@ public class ConversionController {
                 // Switch on the HTTP code returned by the API call
                 switch (APIResponse.getValue()) {
                     case 200: // successful case
-                        double conversionRate = APIHandling.APIProcessing.GetConversionRate(
+                        double conversionRate = APIHandling.APIProcessing.ParseConversionResponse(
                                 APIResponse.getKey(), toCurrencyInput);
                         if (conversionRate == -1.0) {
                             ResultsText.setText("The output currency entered is not supported");
@@ -51,6 +51,7 @@ public class ConversionController {
                     default: // unexpected error(s)
                         ResultsText.setText("An unexpected error occurred");
                 }
+            // catch especially the IOException, although it should never be thrown
             } catch (Exception e) {
                 ResultsText.setText("An unexpected error occurred, " +
                         "check your internet connection and try again");

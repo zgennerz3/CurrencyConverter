@@ -12,8 +12,16 @@ import java.io.IOException;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class APIHandlingTests {
+    /**
+     * A single instance of the HTTP client used for all requests during unit testing
+     */
     private static final OkHttpClient APIClient = new OkHttpClient();
 
+    /**
+     * Fetches the conversion data from USD to EUR from the Frankfurter API
+     * @return The body of an API response, as a String
+     * @throws IOException If an I/O error occurs during processing
+     */
     public static String GetAPIResponseBody() throws IOException {
         Request request = new Request.Builder().url(
                 "https://api.frankfurter.dev/v1/latest?base=USD&symbols=EUR").build();
@@ -27,7 +35,9 @@ public class APIHandlingTests {
         }
     }
 
-    // Tests if the method returns a successful HTTP code and non-empty body for a valid conversion
+    /**
+     * Tests for a successful HTTP code and non-empty body for a valid conversion
+     */
     @Test @Order(0)
     void testGoodGetConversionByCurrencies() {
         try {
@@ -39,7 +49,9 @@ public class APIHandlingTests {
             fail("Test failed due to IO exception");
         }
     }
-    // Tests if the method returns a 'not found' HTTP code for an invalid conversion
+    /**
+     * Tests for a 'not found' HTTP code for an invalid conversion
+     */
     @Test @Order(0)
     void testBadGetConversionByCurrencies() {
         try {
@@ -52,12 +64,14 @@ public class APIHandlingTests {
         }
     }
 
-    //
+    /**
+     * Tests for a valid conversion rate from a successful query body
+     */
     @Test @Order(1)
     void testGoodGetConversionRate() {
         try {
             String responseBody = GetAPIResponseBody();
-            double conversionRate = APIHandling.APIProcessing.GetConversionRate(
+            double conversionRate = APIHandling.APIProcessing.ParseConversionResponse(
                     responseBody, "EUR");
             assertNotEquals(conversionRate, -1.0);
         }
@@ -65,12 +79,14 @@ public class APIHandlingTests {
             fail("Test failed due to IO exception");
         }
     }
-    //
+    /**
+     * Tests for a -1.0 (parsing failed) return from a failed query body
+     */
     @Test @Order(1)
     void testBadGetConversionRate() {
         try {
             String responseBody = GetAPIResponseBody();
-            double conversionRate = APIHandling.APIProcessing.GetConversionRate(
+            double conversionRate = APIHandling.APIProcessing.ParseConversionResponse(
                     responseBody, "XXX");
             assertEquals(conversionRate, -1.0);
         }
