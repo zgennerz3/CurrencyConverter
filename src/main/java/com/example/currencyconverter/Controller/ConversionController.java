@@ -68,14 +68,4 @@ public class ConversionController {
             }
         }
     }
-
-//    Multiplies user entered value by the conversion rate
-    private void ConvertSpecifiedAmount() {
-        ConvertedCurrencyValue.setText("this function is working");
-    }
-
-////    Maybe refactor the regex to use here
-//    private String ConversionRateFinder(String APIResponse) {
-//        // regex logic
-//    }
 }
