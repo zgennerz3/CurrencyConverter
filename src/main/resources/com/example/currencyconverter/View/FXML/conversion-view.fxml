@@ -10,14 +10,24 @@
 <?import javafx.scene.image.Image?>
 <VBox alignment="CENTER" spacing="50.0" xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.example.currencyconverter.Controller.ConversionController">
-    <Label text="Currency Converter" />
+    <Label fx:id="HeaderText" text="Currency Converter" />
+<!--  Input fields to specify which currency to convert  -->
     <HBox alignment="CENTER" spacing="8.0">
         <TextField fx:id="CurrencyFrom" promptText="From" />
         <ImageView fitHeight="50" fitWidth="50">
-            <Image url="@../Images/ConversionArrow.png"/>
+            <image>
+                <Image url="@../Images/ConversionArrow.png" />
+            </image>
         </ImageView>
+        <!-- Button to initiate the currency conversion method -->
         <TextField fx:id="CurrencyTo" promptText="To" />
-        <Button onAction="#OnConvertButtonClick" text="Go" />
+        <Button fx:id="ConvertButton" onAction="#OnConvertButtonClick" text="Go" />
     </HBox>
-    <Label/>
+<!--  Input field specifying the amount of currency the user wants to convert  -->
+    <Label text="Value to convert" />
+    <HBox alignment="CENTER" spacing="8.0">
+        <TextField fx:id="AmountOfCurrency" promptText="Enter value to convert" />
+    </HBox>
+    <Label fx:id="ResultsText"/>
+    <Label fx:id="ConvertedCurrencyValue"/>
 </VBox>

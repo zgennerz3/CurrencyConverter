@@ -11,6 +11,8 @@ public class ConversionController {
     @FXML private TextField CurrencyFrom;
     @FXML private TextField CurrencyTo;
     @FXML private Label ResultsText;
+    @FXML private TextField AmountOfCurrency;
+    @FXML private Label ConvertedCurrencyValue;
 
     @FXML
     private void OnConvertButtonClick() {
@@ -39,6 +41,14 @@ public class ConversionController {
                             ResultsText.setText(String.format("The conversion rate from %s to %s is %f",
                                     fromCurrencyInput.toUpperCase(), toCurrencyInput.toUpperCase(), conversionRate)
                                     .replaceAll("\\.?0+$", "")); // remove trailing zeros
+                            // Check if user input for amount of currency to convert is empty
+                            if (AmountOfCurrency.getText().isEmpty()) {
+                                break;
+                            }
+                            else {
+                                ConvertedCurrencyValue.setText("Working");
+                                //ConvertSpecifiedAmount();
+                            }
                         }
                         break;
                     case 404: // invalid currency(s) case
@@ -58,4 +68,14 @@ public class ConversionController {
             }
         }
     }
+
+//    Multiplies user entered value by the conversion rate
+    private void ConvertSpecifiedAmount() {
+        ConvertedCurrencyValue.setText("this function is working");
+    }
+
+////    Maybe refactor the regex to use here
+//    private String ConversionRateFinder(String APIResponse) {
+//        // regex logic
+//    }
 }
