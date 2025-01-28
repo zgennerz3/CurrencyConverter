@@ -70,7 +70,6 @@ public class ConversionController {
 
 //    Multiplies user entered value by the conversion rate
     private void ConvertSpecifiedAmount() {
-        APIHandling.APIProcessing.GetConversionRate.
         ConvertedCurrencyValue.setText("this function is working");
     }
 
