@@ -41,18 +41,18 @@ public class ConversionController {
                             ResultsText.setText(String.format("The conversion rate from %s to %s is %f",
                                     fromCurrencyInput.toUpperCase(), toCurrencyInput.toUpperCase(), conversionRate)
                                     .replaceAll("\\.?0+$", "")); // remove trailing zeros
-                            // Check if user input for amount of currency to convert is empty
+                            // If input field for converiting specific amount of currency is empty, erase the text field
                             if (AmountOfCurrency.getText().isEmpty()) {
                                 ConvertedCurrencyValue.setText("");
                                 break;
                             }
+                            // Multiply the inputted currency value with the conversion rate and display the results
                             else {
                                 String CurrencyInput = AmountOfCurrency.getText();
                                 Double ConvertedCurrency = (Double.parseDouble(CurrencyInput) * conversionRate);
                                 ConvertedCurrencyValue.setText(String.format("%s %s equals %.2f %s", CurrencyInput,
                                         fromCurrencyInput.toUpperCase(), ConvertedCurrency,
                                         toCurrencyInput.toUpperCase()));
-                                //ConvertSpecifiedAmount();
                             }
                         }
                         break;
