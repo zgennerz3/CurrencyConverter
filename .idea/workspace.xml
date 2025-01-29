@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fbaa21f4-b6ae-4ffe-b40e-06353f339903" name="Changes" comment="Updated unit tests and dependencies to ensure they run correctly">
+    <list default="true" id="fbaa21f4-b6ae-4ffe-b40e-06353f339903" name="Changes" comment="Implemented option to convert a specified amount of currency.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/currencyconverter/Controller/ConversionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/currencyconverter/Controller/ConversionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/currencyconverter/View/FXML/conversion-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/currencyconverter/View/FXML/conversion-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,8 +31,8 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/zgennerz3/CurrencyConverter&quot;,
-    &quot;accountId&quot;: &quot;885732d3-7ea1-4a55-93d8-7ab560892342&quot;
+    &quot;url&quot;: &quot;https://github.com/zgennerz3/CurrencyConverter.git&quot;,
+    &quot;accountId&quot;: &quot;402c57bb-d712-4d27-832b-05d5b000aa9b&quot;
   }
 }</component>
   <component name="MavenImportPreferences">
@@ -58,13 +58,15 @@
     &quot;Maven.CurrencyConverter [org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test].executor&quot;: &quot;Run&quot;,
     &quot;Maven.CurrencyConverter [test].executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.29310346&quot;
+    &quot;project.structure.side.proportion&quot;: &quot;0.29310346&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RecentsManager">
