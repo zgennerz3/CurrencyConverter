@@ -20,7 +20,7 @@ public class ConversionController {
         String fromCurrencyInput = CurrencyFrom.getText();
         String toCurrencyInput = CurrencyTo.getText();
 
-        // Check if inputs are sane (3 alphabetical letter)
+        // Check if inputs are sane (3 alphabetical letters)
         if (fromCurrencyInput.length() != 3 || toCurrencyInput.length() != 3
             || !fromCurrencyInput.matches("[a-zA-Z]+") || !toCurrencyInput.matches("[a-zA-Z]+")) {
             ResultsText.setText("Please enter valid currency codes");
@@ -39,12 +39,12 @@ public class ConversionController {
                             ResultsText.setText("The output currency entered is not supported");
                         } else {
                             ResultsText.setText(String.format("The conversion rate from %s to %s is %f",
-                                    fromCurrencyInput.toUpperCase(), toCurrencyInput.toUpperCase(), conversionRate)
-                                    .replaceAll("\\.?0+$", "")); // remove trailing zeros
-                            // If input field for converiting specific amount of currency is empty, erase the text field
+                                    fromCurrencyInput.toUpperCase(), toCurrencyInput.toUpperCase(),
+                                            conversionRate).replaceAll("\\.?0+$", ""));
+                                            // replace all trailing zeros with nothing
+                            // If no amount of currency is specified, do not provide this result
                             if (AmountOfCurrency.getText().isEmpty()) {
                                 ConvertedCurrencyValue.setText("");
-                                break;
                             }
                             // Multiply the inputted currency value with the conversion rate and display the results
                             else {
@@ -58,18 +58,22 @@ public class ConversionController {
                         break;
                     case 404: // invalid currency(s) case
                         ResultsText.setText("The conversion entered is not supported");
+                        ConvertedCurrencyValue.setText("");
                         break;
-                    case 422: // both currency case
+                    case 422: // same currency case
                         ResultsText.setText(String.format("The conversion from %s to %s is 1...obviously",
                                 fromCurrencyInput.toUpperCase(), toCurrencyInput.toUpperCase()));
+                        ConvertedCurrencyValue.setText("");
                         break;
                     default: // unexpected error(s)
                         ResultsText.setText("An unexpected error occurred");
+                        ConvertedCurrencyValue.setText("");
                 }
             // catch especially the IOException, although it should never be thrown
             } catch (Exception e) {
                 ResultsText.setText("An unexpected error occurred, " +
                         "check your internet connection and try again");
+                ConvertedCurrencyValue.setText("");
             }
         }
     }
