@@ -38,7 +38,7 @@ public class ConversionController {
                         if (conversionRate == -1.0) {
                             ResultsText.setText("The output currency entered is not supported");
                         } else {
-                            ResultsText.setText(String.format("The conversion rate from %s to %s is %f",
+                            ResultsText.setText(String.format("The exchange rate of %s to \n %s is %f",
                                     fromCurrencyInput.toUpperCase(), toCurrencyInput.toUpperCase(),
                                             conversionRate).replaceAll("\\.?0+$", ""));
                                             // replace all trailing zeros with nothing
