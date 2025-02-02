@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fbaa21f4-b6ae-4ffe-b40e-06353f339903" name="Changes" comment="Changed GUI to resemble mobile layout. WIP, not very pretty yet">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/currencyconverter/Controller/ConversionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/currencyconverter/Controller/ConversionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/currencyconverter/View/FXML/conversion-view.fxml" beforeDir="false" />
-    </list>
+    <list default="true" id="fbaa21f4-b6ae-4ffe-b40e-06353f339903" name="Changes" comment="Updated GUI to a more modern look. Need to fix window resizing issue when running application." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -189,7 +185,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738153238398</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Updated GUI to a more modern look. Need to fix window resizing issue when running application.">
+      <option name="closed" value="true" />
+      <created>1738499811863</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1738499811863</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -212,6 +216,7 @@
     <MESSAGE value="Refactored API and controller code to close resources properly, allow for lower/mixed case inputs, and debugged error feedback" />
     <MESSAGE value="Updated unit tests and dependencies to ensure they run correctly" />
     <MESSAGE value="Changed GUI to resemble mobile layout. WIP, not very pretty yet" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed GUI to resemble mobile layout. WIP, not very pretty yet" />
+    <MESSAGE value="Updated GUI to a more modern look. Need to fix window resizing issue when running application." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated GUI to a more modern look. Need to fix window resizing issue when running application." />
   </component>
 </project>
