@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fbaa21f4-b6ae-4ffe-b40e-06353f339903" name="Changes" comment="Updated GUI to a more modern look. Need to fix window resizing issue when running application." />
+    <list default="true" id="fbaa21f4-b6ae-4ffe-b40e-06353f339903" name="Changes" comment="Fixed GUI to remove old results on new (invalid) queries, adjusted phrasing in various comments">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/currencyconverter/Controller/ConversionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/currencyconverter/Controller/ConversionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/currencyconverter/Model/APIHandling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/currencyconverter/Model/APIHandling.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/APIHandlingTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/APIHandlingTests.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +21,6 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
-        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -29,8 +35,8 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/zgennerz3/CurrencyConverter.git&quot;,
-    &quot;accountId&quot;: &quot;402c57bb-d712-4d27-832b-05d5b000aa9b&quot;
+    &quot;url&quot;: &quot;https://github.com/zgennerz3/CurrencyConverter&quot;,
+    &quot;accountId&quot;: &quot;885732d3-7ea1-4a55-93d8-7ab560892342&quot;
   }
 }</component>
   <component name="MavenImportPreferences">
@@ -49,24 +55,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.CurrencyConverter.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.APIHandlingTests.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.CurrencyConverter [org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.CurrencyConverter [test].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.29310346&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.CurrencyConverter.executor": "Run",
+    "JUnit.APIHandlingTests.executor": "Run",
+    "JUnit.APIHandlingTests.testGoodGetConversionRate.executor": "Debug",
+    "Maven.CurrencyConverter [org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test].executor": "Run",
+    "Maven.CurrencyConverter [test].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.29310346"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\zaneg\OneDrive\Documents\Coding Projects\CurrencyConverter\src\main\resources\com\example\currencyconverter\View" />
@@ -76,6 +81,16 @@
     </key>
   </component>
   <component name="RunManager">
+    <configuration name="APIHandlingTests.testGoodGetConversionRate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CurrencyConverter" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="APIHandlingTests" />
+      <option name="METHOD_NAME" value="testGoodGetConversionRate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CurrencyConverter [test]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -109,6 +124,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Maven.CurrencyConverter [test]" />
+        <item itemvalue="JUnit.APIHandlingTests.testGoodGetConversionRate" />
       </list>
     </recent_temporary>
   </component>
@@ -177,23 +193,7 @@
       <option name="project" value="LOCAL" />
       <updated>1737971896582</updated>
     </task>
-    <task id="LOCAL-00008" summary="Changed GUI to resemble mobile layout. WIP, not very pretty yet">
-      <option name="closed" value="true" />
-      <created>1738153238398</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1738153238398</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Updated GUI to a more modern look. Need to fix window resizing issue when running application.">
-      <option name="closed" value="true" />
-      <created>1738499811863</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1738499811863</updated>
-    </task>
-    <option name="localTasksCounter" value="10" />
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -215,8 +215,6 @@
     <MESSAGE value="Implemented basic currency conversion retrieval, with GUI feedback" />
     <MESSAGE value="Refactored API and controller code to close resources properly, allow for lower/mixed case inputs, and debugged error feedback" />
     <MESSAGE value="Updated unit tests and dependencies to ensure they run correctly" />
-    <MESSAGE value="Changed GUI to resemble mobile layout. WIP, not very pretty yet" />
-    <MESSAGE value="Updated GUI to a more modern look. Need to fix window resizing issue when running application." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated GUI to a more modern look. Need to fix window resizing issue when running application." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated unit tests and dependencies to ensure they run correctly" />
   </component>
 </project>

@@ -73,7 +73,7 @@ public class APIHandlingTests {
             String responseBody = GetAPIResponseBody();
             double conversionRate = APIHandling.APIProcessing.ParseConversionResponse(
                     responseBody, "EUR");
-            assertNotEquals(conversionRate, -1.0);
+            assertNotEquals(conversionRate, Double.NaN);
         }
         catch (IOException e) {
             fail("Test failed due to IO exception");
@@ -88,7 +88,7 @@ public class APIHandlingTests {
             String responseBody = GetAPIResponseBody();
             double conversionRate = APIHandling.APIProcessing.ParseConversionResponse(
                     responseBody, "XXX");
-            assertEquals(conversionRate, -1.0);
+            assertEquals(conversionRate, Double.NaN);
         }
         catch (IOException e) {
             fail("Test failed due to IO exception");

@@ -2,11 +2,9 @@ package com.example.currencyconverter.Model;
 
 import javafx.util.Pair;
 import okhttp3.*;
+import com.google.gson.*;
 
 import java.io.IOException;
-import java.util.regex.Pattern;
-import java.util.regex.Matcher;
-
 
 /**
  * A utility class containing methods used for querying and interpreting the responses of queries
@@ -63,19 +61,16 @@ public class APIHandling {
          * @param toCurrency The currency to convert to (from the base currency used in the query)
          * @return The conversion rate, as a double, or -1.0 if parsing fails
          */
-        public static double ParseConversionResponse(String APIResponseBody, String toCurrency) {
-            String toCurrencyUpper = toCurrency.toUpperCase(); // bc API results are always in all caps
-            String patternString = String.format("\"%s\":(.*?)}", toCurrencyUpper);
-            Pattern pattern = Pattern.compile(patternString);
-            String conversionString;
-            Matcher matches = pattern.matcher(APIResponseBody);
-            if (matches.find()) {
-                conversionString = matches.group(1); // the capture group, (0) is the whole match
+        public static double ParseConversionResponse(String APIResponseBody, String toCurrency)
+                throws JsonSyntaxException {
+            try {
+                JsonObject jsonResponse = JsonParser.parseString(APIResponseBody).getAsJsonObject();
+                JsonObject jsonRates = jsonResponse.getAsJsonObject("rates");
+                return Double.parseDouble(jsonRates.get(toCurrency).toString());
             }
-            else {
-                conversionString = "-1.0"; // used for the failing case bc conversions are always +ve
+            catch (NullPointerException e) {
+                return Double.NaN; // return NaN if parsing fails due to a bad query
             }
-            return Double.parseDouble(conversionString);
         }
     }
 }

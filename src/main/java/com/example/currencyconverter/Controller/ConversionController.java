@@ -34,8 +34,8 @@ public class ConversionController {
                 switch (APIResponse.getValue()) {
                     case 200: // successful case
                         double conversionRate = APIHandling.APIProcessing.ParseConversionResponse(
-                                APIResponse.getKey(), toCurrencyInput);
-                        if (conversionRate == -1.0) {
+                                APIResponse.getKey(), toCurrencyInput.toUpperCase());
+                        if (Double.isNaN(conversionRate)) {
                             ResultsText.setText("The output currency entered is not supported");
                         } else {
                             ResultsText.setText(String.format("The exchange rate of %s to \n %s is %f",
@@ -46,7 +46,7 @@ public class ConversionController {
                             if (AmountOfCurrency.getText().isEmpty()) {
                                 ConvertedCurrencyValue.setText("");
                             }
-                            // Multiply the inputted currency value with the conversion rate and display the results
+                            // Also provide the total amount of money if conversion amount is specified
                             else {
                                 String CurrencyInput = AmountOfCurrency.getText();
                                 Double ConvertedCurrency = (Double.parseDouble(CurrencyInput) * conversionRate);
@@ -69,7 +69,7 @@ public class ConversionController {
                         ResultsText.setText("An unexpected error occurred");
                         ConvertedCurrencyValue.setText("");
                 }
-            // catch especially the IOException, although it should never be thrown
+            // catch especially the IOException, in an exceptional case
             } catch (Exception e) {
                 ResultsText.setText("An unexpected error occurred, " +
                         "check your internet connection and try again");
