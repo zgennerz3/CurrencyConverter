@@ -22,7 +22,7 @@ public class CurrencyConverter extends Application {
     }
 
     public static void main(String[] args) {
-        // Launch the app only if the database table is set up correctly first
+        // Check the database can be set up correctly before launch
         try {
             CurrencyPairDAO DAO = new CurrencyPairDAO(() -> {
                 try {
@@ -31,11 +31,15 @@ public class CurrencyConverter extends Application {
                     throw new RuntimeException(e);
                 }
             });
-            DAO.createTable();
-            launch();
+            DAO.CreateTable();
         }
         catch (SQLException | RuntimeException e) {
             System.err.println("Error in application startup (database)" + e.getMessage());
         }
+
+        // Update (or populate) the database with valid conversion pairs
+
+
+        launch();
     }
 }

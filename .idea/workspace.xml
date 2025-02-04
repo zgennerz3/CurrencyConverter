@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fbaa21f4-b6ae-4ffe-b40e-06353f339903" name="Changes" comment="Adjusted JSON parsing to use a GSON to allow future extensions, and return NaN when parsing fails instead of -1.0">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="fbaa21f4-b6ae-4ffe-b40e-06353f339903" name="Changes" comment="Added basic SQLite database logic for tracking valid currency pairs + unit tests, added basic API logic for retrieving all conversions for a base currency">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/currencyconverter/CurrencyConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/currencyconverter/CurrencyConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/currencyconverter/Model/APIHandling.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/currencyconverter/Model/APIHandling.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/currencyconverter/Model/CurrencyPairDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/currencyconverter/Model/CurrencyPairDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/APIHandlingTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/APIHandlingTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CurrencyPairDAOTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CurrencyPairDAOTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +59,7 @@
     "Application.CurrencyConverter.executor": "Run",
     "JUnit.APIHandlingTests.executor": "Run",
     "JUnit.APIHandlingTests.testGoodGetConversionRate.executor": "Debug",
+    "JUnit.APIHandlingTests.testGoodGetValidConversions.executor": "Run",
     "JUnit.CurrencyPairDAOTests.testInsert.executor": "Run",
     "Maven.CurrencyConverter [org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test].executor": "Run",
     "Maven.CurrencyConverter [test].executor": "Run",
@@ -81,12 +81,32 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CurrencyPairDAOTests.testInsert">
+  <component name="RunManager" selected="JUnit.APIHandlingTests.testGoodGetValidConversions">
+    <configuration name="APIHandlingTests.testBadGetValidConversions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CurrencyConverter" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="APIHandlingTests" />
+      <option name="METHOD_NAME" value="testBadGetValidConversions" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="APIHandlingTests.testGoodGetConversionRate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CurrencyConverter" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="APIHandlingTests" />
       <option name="METHOD_NAME" value="testGoodGetConversionRate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="APIHandlingTests.testGoodGetValidConversions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CurrencyConverter" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="APIHandlingTests" />
+      <option name="METHOD_NAME" value="testGoodGetValidConversions" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -134,8 +154,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CurrencyPairDAOTests.testInsert" />
+        <item itemvalue="JUnit.APIHandlingTests.testGoodGetValidConversions" />
+        <item itemvalue="JUnit.APIHandlingTests.testBadGetValidConversions" />
         <item itemvalue="Maven.CurrencyConverter [test]" />
+        <item itemvalue="JUnit.CurrencyPairDAOTests.testInsert" />
         <item itemvalue="JUnit.APIHandlingTests.testGoodGetConversionRate" />
       </list>
     </recent_temporary>
@@ -213,7 +235,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738573784273</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Added basic SQLite database logic for tracking valid currency pairs + unit tests, added basic API logic for retrieving all conversions for a base currency">
+      <option name="closed" value="true" />
+      <created>1738657794217</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1738657794217</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -236,6 +266,7 @@
     <MESSAGE value="Refactored API and controller code to close resources properly, allow for lower/mixed case inputs, and debugged error feedback" />
     <MESSAGE value="Updated unit tests and dependencies to ensure they run correctly" />
     <MESSAGE value="Adjusted JSON parsing to use a GSON to allow future extensions, and return NaN when parsing fails instead of -1.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adjusted JSON parsing to use a GSON to allow future extensions, and return NaN when parsing fails instead of -1.0" />
+    <MESSAGE value="Added basic SQLite database logic for tracking valid currency pairs + unit tests, added basic API logic for retrieving all conversions for a base currency" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added basic SQLite database logic for tracking valid currency pairs + unit tests, added basic API logic for retrieving all conversions for a base currency" />
   </component>
 </project>

@@ -17,7 +17,7 @@ public class CurrencyPairDAOTests {
         // Set up a mock database in memory for testing
         connection = DriverManager.getConnection("jdbc:sqlite::memory:");
         DAO = new CurrencyPairDAO(() -> connection);
-        DAO.createTable();
+        DAO.CreateTable();
     }
 
     /**
@@ -26,7 +26,7 @@ public class CurrencyPairDAOTests {
      */
     @Test @Order(0)
     void testInsert() throws SQLException {
-        DAO.insert("USD", "EUR");
+        DAO.InsertIgnore("USD", "EUR");
         try (Statement stmt = connection.createStatement();
              ResultSet RS = stmt.executeQuery("SELECT COUNT(*) FROM currencyPairs")) {
             assertTrue(RS.next());

@@ -31,7 +31,7 @@ public class CurrencyPairDAO {
     }
 
     /** Creates the currencyPairs table in the database if it does not already exist (on first launch) */
-    public void createTable() throws SQLException {
+    public void CreateTable() throws SQLException {
         try (Statement createTable = getConnection().createStatement()) {
             createTable.execute("CREATE TABLE IF NOT EXISTS currencyPairs ("
                     + "fromCurrency TEXT NOT NULL, "
@@ -45,7 +45,7 @@ public class CurrencyPairDAO {
      * @param fromCurrency The base of the currency pair to be inserted
      * @param toCurrency The supported conversion of the currency pair to be inserted
      */
-    public void insert(String fromCurrency, String toCurrency) {
+    public void InsertIgnore(String fromCurrency, String toCurrency) {
         String sql = "INSERT OR IGNORE INTO currencyPairs VALUES ( ?, ?)";
         try (PreparedStatement insertPair = getConnection().prepareStatement(sql)) {
             insertPair.setString(1, fromCurrency);
