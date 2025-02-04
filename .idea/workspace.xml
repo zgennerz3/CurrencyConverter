@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fbaa21f4-b6ae-4ffe-b40e-06353f339903" name="Changes" comment="Added basic SQLite database logic for tracking valid currency pairs + unit tests, added basic API logic for retrieving all conversions for a base currency">
+    <list default="true" id="fbaa21f4-b6ae-4ffe-b40e-06353f339903" name="Changes" comment="Expanded API logic for fetching all valid currencies to convert to + tests">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/currencyconverter/CurrencyConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/currencyconverter/CurrencyConverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/currencyconverter/Model/CurrencyPairDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/currencyconverter/Model/CurrencyPairDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/APIHandlingTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/APIHandlingTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CurrencyPairDAOTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CurrencyPairDAOTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +56,7 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Application.CurrencyConverter.executor": "Run",
     "JUnit.APIHandlingTests.executor": "Run",
+    "JUnit.APIHandlingTests.testBadGetValidConversions.executor": "Run",
     "JUnit.APIHandlingTests.testGoodGetConversionRate.executor": "Debug",
     "JUnit.APIHandlingTests.testGoodGetValidConversions.executor": "Run",
     "JUnit.CurrencyPairDAOTests.testInsert.executor": "Run",
@@ -81,7 +80,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.APIHandlingTests.testGoodGetValidConversions">
+  <component name="RunManager">
     <configuration name="APIHandlingTests.testBadGetValidConversions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CurrencyConverter" />
       <option name="PACKAGE_NAME" value="" />
@@ -154,9 +153,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Maven.CurrencyConverter [test]" />
         <item itemvalue="JUnit.APIHandlingTests.testGoodGetValidConversions" />
         <item itemvalue="JUnit.APIHandlingTests.testBadGetValidConversions" />
-        <item itemvalue="Maven.CurrencyConverter [test]" />
         <item itemvalue="JUnit.CurrencyPairDAOTests.testInsert" />
         <item itemvalue="JUnit.APIHandlingTests.testGoodGetConversionRate" />
       </list>
@@ -243,7 +242,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738657794217</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Expanded API logic for fetching all valid currencies to convert to + tests">
+      <option name="closed" value="true" />
+      <created>1738659290926</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1738659290926</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -267,6 +274,22 @@
     <MESSAGE value="Updated unit tests and dependencies to ensure they run correctly" />
     <MESSAGE value="Adjusted JSON parsing to use a GSON to allow future extensions, and return NaN when parsing fails instead of -1.0" />
     <MESSAGE value="Added basic SQLite database logic for tracking valid currency pairs + unit tests, added basic API logic for retrieving all conversions for a base currency" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added basic SQLite database logic for tracking valid currency pairs + unit tests, added basic API logic for retrieving all conversions for a base currency" />
+    <MESSAGE value="Expanded API logic for fetching all valid currencies to convert to + tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Expanded API logic for fetching all valid currencies to convert to + tests" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/APIHandlingTests.java</url>
+          <line>153</line>
+          <properties class="APIHandlingTests" method="testBadGetValidConversions">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

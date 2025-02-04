@@ -24,9 +24,8 @@ public class CurrencyPairDAO {
     /**
      * Returns the connection used by the DAO
      * @return The connection used by the DAO
-     * @throws SQLException If the stored connection is invalid
      */
-    private Connection getConnection() throws SQLException {
+    private Connection getConnection() {
         return connectionSupplier.get();
     }
 
@@ -45,14 +44,12 @@ public class CurrencyPairDAO {
      * @param fromCurrency The base of the currency pair to be inserted
      * @param toCurrency The supported conversion of the currency pair to be inserted
      */
-    public void InsertIgnore(String fromCurrency, String toCurrency) {
+    public void InsertIgnore(String fromCurrency, String toCurrency) throws SQLException {
         String sql = "INSERT OR IGNORE INTO currencyPairs VALUES ( ?, ?)";
         try (PreparedStatement insertPair = getConnection().prepareStatement(sql)) {
             insertPair.setString(1, fromCurrency);
             insertPair.setString(2, toCurrency);
             insertPair.executeUpdate();
-        } catch (SQLException ex) {
-            System.err.println("Currency pair insertion error: " + ex.getMessage());
         }
     }
 }
