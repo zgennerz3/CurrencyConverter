@@ -4,6 +4,7 @@ module com.example.currencycon.currencyconverter {
     requires okhttp3;
     requires annotations;
     requires com.google.gson;
+    requires java.sql;
 
     opens com.example.currencyconverter to javafx.fxml;
     exports com.example.currencyconverter;

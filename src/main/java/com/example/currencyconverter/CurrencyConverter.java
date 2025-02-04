@@ -1,11 +1,14 @@
 package com.example.currencyconverter;
 
+import com.example.currencyconverter.Model.CurrencyPairDAO;
+import com.example.currencyconverter.Model.DatabaseConnection;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 public class CurrencyConverter extends Application {
     @Override
@@ -19,6 +22,20 @@ public class CurrencyConverter extends Application {
     }
 
     public static void main(String[] args) {
-        launch();
+        // Launch the app only if the database table is set up correctly first
+        try {
+            CurrencyPairDAO DAO = new CurrencyPairDAO(() -> {
+                try {
+                    return DatabaseConnection.getConnection();
+                } catch (SQLException e) {
+                    throw new RuntimeException(e);
+                }
+            });
+            DAO.createTable();
+            launch();
+        }
+        catch (SQLException | RuntimeException e) {
+            System.err.println("Error in application startup (database)" + e.getMessage());
+        }
     }
 }
