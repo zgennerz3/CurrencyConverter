@@ -8,7 +8,7 @@
 
 <AnchorPane prefHeight="446.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.currencyconverter.Controller.ConversionController">
    <children>
-<!--       Header with app name -->
+<!--Header with app name-->
        <HBox layoutY="-1.0" prefHeight="86.0" prefWidth="549.0" style="-fx-background-color: #e4e4e4;">
            <children>
                <Label prefHeight="91.0" prefWidth="319.0" text="Currency &#10;Converter" textFill="#28d6ed">
@@ -21,7 +21,7 @@
                </Label>
            </children></HBox>
 
-<!--       Text inputs and convert button-->
+<!--Text inputs and convert button-->
       <VBox layoutY="85.0" prefHeight="340.0" prefWidth="246.0">
          <children>
             <Label prefHeight="34.0" prefWidth="161.0" text="From">
@@ -32,7 +32,7 @@
                   <Insets bottom="10.0" left="20.0" top="20.0" />
                </VBox.margin>
             </Label>
-            <TextField fx:id="CurrencyFrom" prefHeight="37.0" promptText="AUD">
+            <TextField fx:id="CurrencyFrom" prefHeight="37.0" promptText="e.g. aud">
                <effect>
                   <Glow />
                </effect>
@@ -47,7 +47,7 @@
                <VBox.margin>
                   <Insets bottom="10.0" left="20.0" top="20.0" />
                </VBox.margin></Label>
-            <TextField fx:id="CurrencyTo" prefHeight="37.0" promptText="USD">
+            <TextField fx:id="CurrencyTo" prefHeight="37.0" promptText="e.g. usd">
                <effect>
                   <Glow />
                </effect>
@@ -63,7 +63,7 @@
                   <Font name="OCR A Extended" size="22.0" />
                </font>
             </Label>
-            <TextField fx:id="AmountOfCurrency" prefHeight="37.0" promptText="AMOUNT">
+            <TextField fx:id="AmountOfCurrency" prefHeight="37.0" promptText="e.g. 120.0">
                <VBox.margin>
                   <Insets left="20.0" right="20.0" />
                </VBox.margin>

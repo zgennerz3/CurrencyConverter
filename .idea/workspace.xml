@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fbaa21f4-b6ae-4ffe-b40e-06353f339903" name="Changes" comment="Implemented population/updating of database with all valid conversion pairs on launch">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/currencyconverter/CurrencyConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/currencyconverter/CurrencyConverter.java" afterDir="false" />
-    </list>
+    <list default="true" id="fbaa21f4-b6ae-4ffe-b40e-06353f339903" name="Changes" comment="Implemented threading to quicken setup before launch" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -258,7 +255,15 @@
       <option name="project" value="LOCAL" />
       <updated>1738660565706</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Implemented threading to quicken setup before launch">
+      <option name="closed" value="true" />
+      <created>1739780722684</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1739780722684</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -285,7 +290,8 @@
     <MESSAGE value="Expanded API logic for fetching all valid currencies to convert to + tests" />
     <MESSAGE value="Implemented feature to populate/update database with all valid conversion pairs on launch" />
     <MESSAGE value="Implemented population/updating of database with all valid conversion pairs on launch" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented population/updating of database with all valid conversion pairs on launch" />
+    <MESSAGE value="Implemented threading to quicken setup before launch" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented threading to quicken setup before launch" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
